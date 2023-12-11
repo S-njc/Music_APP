@@ -7,17 +7,17 @@ import './App.css'
 const App = () => {
   return (
     <div className="App">
-      
+      <NavBar />
       <Routes>
-        <Route path='/' element={<NavBar />}>
-          <Route index element={<Pages.Home />} />
-        </Route>
-        
-        <Route path='/about' element={<Pages.ArtistInfo />} />
+        <Route path='/' element={<Pages.Home />} />
+          
+        <Route path='/ArtistInfo' element={<Pages.ArtistInfo />} />
 
-        <Route path='shop' >
+        <Route path='/Discography' element={<Pages.Discography />} />
+
+        <Route path='/shop'>
           <Route index element={<Pages.Shop />} />
-          <Route path='/shop/:id' element={<Pages.ShopItem />} />
+          <Route path=':id' element={<Pages.ShopItem />} />
         </Route>
 
         <Route path='*' element={<Pages.NotFound />} />
@@ -27,3 +27,4 @@ const App = () => {
 }
 
 export default App
+

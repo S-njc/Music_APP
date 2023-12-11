@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
+import './style.css'
 
 const ArtistInfo = ({ name, musicType, introduction }) => {
   return (

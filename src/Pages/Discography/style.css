@@ -1,0 +1,135 @@
+body {
+    color: white;
+  }
+  
+  body {
+    background-color: white;
+  }
+  
+  h1,
+  p {
+    color: white;
+    text-decoration: underline; /* Underline style */
+  }
+  
+  button {
+    background-color: limegreen;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    width: max-content; /* Adjust width to content */
+    box-sizing: border-box;
+  }
+  
+  button.activated {
+    background-color: darkgreen;
+  }
+  
+  .discography {
+    padding: 24px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .songs-container {
+    flex: 1;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    overflow-y: auto;
+  }
+  
+  .song-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+      rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-radius: 12px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    position: relative;
+    z-index: 0;
+    height: 100%;
+    max-height: 300px;
+  }
+  
+  .song-card:hover:before {
+    content: '';
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-card 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowing-card {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .song-card:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  
+  .song-cover {
+    border-radius: 10px;
+    height: 200px;
+    cursor: pointer;
+  }
+  
+  h1:nth-child(2) {
+    margin-top: 20px;
+    background-color: black; /* Change to black */
+    text-decoration: underline; /* Underline style */
+  }
+  
+  h1:nth-child(3) {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: inline-block;
+    
+  }
